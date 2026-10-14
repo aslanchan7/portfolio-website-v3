@@ -4,17 +4,122 @@
         <meta charset="utf-8"/>
         <title>Aslan Chan | Portfolio</title>
         <link rel="icon" href="favicon.ico" />
+        <style>
+            nav {
+                border: 2px solid;
+            }
+        </style>
     </head>
 
     <body>
-        <header style="border: 2px solid;">
-            <h2>About</h2>
-            <h2>Projects</h2>
-            <h2>Contact</h2>
+        <noscript>Your browser does not support JavaScript!</noscript>
+        <header>
+            <nav>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </nav>
         </header>
 
-        <main></main>
+        <main>
+            <div id="landing-page-intro">
+                <h1>Hi, I'm Aslan!</h1>
+                <h3>Game Developer</h3>
+                <p>Welcome to my portfolio website! Below you can find some of my projects! Feel free to reach out via email as that is the fastest way to reach me.</p>
+                <button type="button">Jump To Projects</button>
+                <button type="button">View Resume</button>
+            </div>
+            <img id="landing-page-img" src="/aslan-chan.jpg" />
+
+            <br />
+
+            <picture class="polaroid-picture">
+                <source media="(min-width:650px)" srcset="/about-image-2.webp" />
+                <img src="/about-image-1.webp" />
+            </picture>
+
+            <div id="about">
+                <h2>About Me</h2>
+                <section>
+                    <p>Hi, I'm Aslan! I'm a <b>UI Programmer</b> for games and I do such and such. This is just a <em>temporary description</em>.</p>
+                </section>
+                <section>
+                    <p>You can learn more about me <i>here</i>.</p>   
+                </section>
+                <section>
+                    <p><strong>These are some projects that I am proud of.</strong></p>
+                </section>
+            </div>
+
+            <br />
+
+            <h2 id="projects">Projects</h2>
+            <article class="project-card">
+                <img src="/way-of-feng-shui.png" />
+                <h3>Project Title</h3>
+                <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
+            </article>
+            <article class="project-card">
+                <img src="/way-of-feng-shui.png" />
+                <h3>Project Title</h3>
+                <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
+            </article>
+            <article class="project-card">
+                <img src="/way-of-feng-shui.png" />
+                <h3>Project Title</h3>
+                <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
+            </article>
+
+            <button>Load More</button>
+
+            <template>
+                <article class="project-card">
+                    <img src="/way-of-feng-shui.png" />
+                    <h3>Project Title</h3>
+                    <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
+                </article>
+            </template>
+
+            <br />
+
+            <form id="contact">
+                <fieldset>
+                    <legend>Contact Me</legend>
+                    <label for="email-field">Email</label>
+                    <input id="email-field" type="email" />
+                    <br />
+                    <label for="subject-field">Subject</label>
+                    <input id="subject-field" type="text" />
+                    <br />
+                    <label for="message-field">Message</label>
+                    <textarea id="message-field"></textarea>
+                    <br />
+                    <button command="show-modal" commandfor="confirmation-dialog">Send Email!</button>
+                </fieldset>
+            </form>
+
+            <dialog id="confirmation-dialog">
+                <p>Email has been sent!</p>
+                <button commandfor="confirmation-dialog" command="close">Close</button>
+            </dialog>
+
+            <canvas id="my-test-canvas">
+                canvas tag not supported.
+            </canvas>
+
+            <script>
+                let canvas = document.getElementById("my-test-canvas");
+                let ctx = canvas.getContext("2d");
+                ctx.fillStyle = "#000000";
+                // ctx.fillRect(0, 0, 80, 80);
+                ctx.fillRect(0, 20, 100, 100);
+            </script>
+        </main>
         
-        <footer></footer>
+        <footer>
+            <svg width="100" height="100">
+                <ellipse cx="50" cy="50" rx="50" ry="30" fill="orange"/>
+            </svg>
+        </footer>
     </body>
 </html>
