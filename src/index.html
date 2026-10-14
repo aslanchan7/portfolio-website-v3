@@ -8,7 +8,24 @@
             nav {
                 border: 2px solid;
             }
+
+            project-card {
+                display: flex;
+                flex-direction: column;
+                width: 25rem;
+                background-color: grey;
+                margin: 1rem;
+            }
         </style>
+        <script>
+            class HelloWorld extends HTMLElement {
+                connectedCallback() {
+                    this.textContent = 'Hello World!';
+                }
+            }
+
+            customElements.define('hello-world', HelloWorld);
+        </script>
     </head>
 
     <body>
@@ -22,6 +39,7 @@
         </header>
 
         <main>
+            <hello-world></hello-world>
             <div id="landing-page-intro">
                 <h1>Hi, I'm Aslan!</h1>
                 <h3>Game Developer</h3>
@@ -54,31 +72,23 @@
             <br />
 
             <h2 id="projects">Projects</h2>
-            <article class="project-card">
+            <project-card>
                 <img src="/way-of-feng-shui.png" />
                 <h3>Project Title</h3>
                 <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
-            </article>
-            <article class="project-card">
+            </project-card>
+            <project-card>
                 <img src="/way-of-feng-shui.png" />
                 <h3>Project Title</h3>
                 <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
-            </article>
-            <article class="project-card">
+            </project-card>
+            <project-card>
                 <img src="/way-of-feng-shui.png" />
                 <h3>Project Title</h3>
                 <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
-            </article>
+            </project-card>
 
             <button>Load More</button>
-
-            <template>
-                <article class="project-card">
-                    <img src="/way-of-feng-shui.png" />
-                    <h3>Project Title</h3>
-                    <p><span>Team Size: 10</span> <span>Role: XXXX</span> <span>Time Frame: 6 weeks</span></p>
-                </article>
-            </template>
 
             <br />
 
@@ -103,17 +113,7 @@
                 <button commandfor="confirmation-dialog" command="close">Close</button>
             </dialog>
 
-            <canvas id="my-test-canvas">
-                canvas tag not supported.
-            </canvas>
-
-            <script>
-                let canvas = document.getElementById("my-test-canvas");
-                let ctx = canvas.getContext("2d");
-                ctx.fillStyle = "#000000";
-                // ctx.fillRect(0, 0, 80, 80);
-                ctx.fillRect(0, 20, 100, 100);
-            </script>
+            <iframe src="https://www.youtube.com/watch?v=qXmt0UGW8rk" title="Mariposa Trailer"></iframe>
         </main>
         
         <footer>
